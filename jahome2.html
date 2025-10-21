@@ -11,14 +11,10 @@ let contact1 = {
     phone: '123-456-7890',
     email: 'johndoe@gmail.com', 
 
-    //accessing name property by using this.name
    getinfo: function() {
         return this.name + ' can be reached at ' + this.phone + ' or ' + this.email;
     }
 
-};
-function printcontactinfo(contact) {
-document.write(contact.getinfo());
 }
 let contact2 = {
     name: 'Jane Smith',
@@ -27,7 +23,10 @@ let contact2 = {
     getinfo: function() {
         return this.name + ' can be reached at ' + this.phone + ' or ' + this.email;
     }
-    //
+}
+function printcontactinfo(contact) {
+document.write(contact.getinfo());
+
 };
 printcontactinfo(contact1);
 document.write('<br>'); 
