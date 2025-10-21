@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Store Sales</title>
+</head>
+<body>
+    <h1>Store Sales Totals</h1>
+    <p id="initial-total"></p>
+    <p id="updated-total"></p>
+
+    <script>
+        // create variables
+        let tshirtCount = 5;
+        let tshirtPrice = 400;
+        let capCount = 3;
+        let capPrice = 150;
+
+        // calculate total earnings
+        let total = tshirtCount * tshirtPrice + capCount * capPrice;
+
+        // display the total earnings
+        document.getElementById('initial-total').textContent =
+            `Total earnings: ₹${total}`;
+
+        // change the price of the t-shirts and recalculate
+        tshirtPrice = 450;
+        let updatedTotal = tshirtCount * tshirtPrice + capCount * capPrice;
+
+        // print the updated total
+        document.getElementById('updated-total').textContent =
+            `Updated total (t-shirt ₹${tshirtPrice}): ₹${updatedTotal}`;
+
+        // also log to console
+        console.log('Total earnings:', total);
+        console.log('Updated total:', updatedTotal);
+    </script>
+</body>
+</html>

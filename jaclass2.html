@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>LIBRARY</h2>
+
+<script>
+let book = {
+    title: 'The Alchemist',
+    author: 'paulo coelho',
+    year: 1988,
+
+    // accessing name property by using this.name
+   getsummary: function() {
+        return this.title + ' was written by ' + this.author + ' in ' + this.year;
+    }
+
+};
+function printbooksummary(bookobject) {
+document.write(bookobject.getsummary());
+}
+printbooksummary(book);
+</script>
+
+</body>
+</html>

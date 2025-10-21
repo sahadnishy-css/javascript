@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simple Grocery Calculator</title>
+</head>
+<body>
+<script>
+    // item names
+    const itemRice = "Rice";
+    const itemSugar = "Sugar";
+    const itemWheat = "Wheat";
+
+    // prices (per unit)
+    const priceRice = 50;
+    const priceSugar = 40;
+    const priceWheat = 30;
+
+    // quantities purchased (will change one later)
+    let qtyRice = 2;
+    let qtySugar = 3;
+    let qtyWheat = 1;
+
+    // costs per item
+    let costRice = priceRice * qtyRice;
+    let costSugar = priceSugar * qtySugar;
+    let costWheat = priceWheat * qtyWheat;
+
+    // total bill
+    let totalBill = costRice + costSugar + costWheat;
+
+    // output initial values
+    console.log(itemRice + " - Price: " + priceRice + ", Qty: " + qtyRice + ", Cost: " + costRice);
+    console.log(itemSugar + " - Price: " + priceSugar + ", Qty: " + qtySugar + ", Cost: " + costSugar);
+    console.log(itemWheat + " - Price: " + priceWheat + ", Qty: " + qtyWheat + ", Cost: " + costWheat);
+    console.log("Total bill: " + totalBill);
+
+    // change the quantity of one item (e.g., customer buys more sugar)
+    qtySugar = 5;
+
+    // recalculate affected cost and total
+    costSugar = priceSugar * qtySugar;
+    totalBill = costRice + costSugar + costWheat;
+
+    // output updated values
+    console.log("After changing quantity:");
+    console.log(itemSugar + " - Price: " + priceSugar + ", Qty: " + qtySugar + ", Cost: " + costSugar);
+    console.log("Updated total bill: " + totalBill);
+</script>
+</body>
+</html>

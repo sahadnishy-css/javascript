@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Class 1</title>
+</head>
+<body>
+    <h1>ONLINE SALES TRACK</h1>
+    <script>
+        // number of items sold for each product
+        const itemsSold = {
+            widgetA: 10,
+            widgetB: 5,
+            widgetC: 12
+        };
+
+        // prices for each product (in USD)
+        const prices = {
+            widgetA: 19.99,
+            widgetB: 5.49,
+            widgetC: 2.99
+        };
+        // calculate total sales
+        let totalSales = 0;
+        for (const item in itemsSold) {
+            totalSales += itemsSold[item] * prices[item];
+        }
+        console.log("Total Sales: $" + totalSales.toFixed(2));
+        
+    </script>
