@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>helper tool</h2>
+
+<script>
+    const userProfile = {
+        username: '  Cool user99  ',
+        bio: 'I love Coding! and javaScript is Great!!!  ',
+            };
+       
+           function cleanProfile(profile) {
+            // Trim whitespace from username and bio
+           const cleanedUsername = profile.username.trim();
+           const cleanedBio = profile.bio.trim();
+            
+            // Convert username and bio to lowercase 
+            const lowerUsername = cleanedUsername.toLowerCase();
+            const lowerBio = cleanedBio.toLowerCase();
+            
+            // Replace  'javaScript' with 'JS' using global replacement
+            const finalBio = lowerBio.replace(/javascript/g, 'JS');
+            //count the number of words in bio
+            const wordCount = finalBio.split(' ').length;
+            //return cleaned profile and bio length 
+            return {
+                cleanedUsername: this.username,
+                cleanedBio: this.bio,
+                bioWordCount: wordCount
+            };
+        
+        }
+        console.log(cleanProfile(userProfile));
+</script>   
+</body>
+</html>
+          
+    

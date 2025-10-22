@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>feedback form</h2>
+
+<script>
+var feedback = "   I loved the FOOD and the service!   ";
+var trimmedFeedback = feedback.trim();
+var lowercaseFeedback = trimmedFeedback.toLowerCase();
+var replacedFeedback = lowercaseFeedback.replace("food", "ambience");
+var feedbackposition = replacedFeedback.indexOf("service");
+var output = replacedFeedback.split(" ");
+document.write("Original Feedback: '" + feedback + "'<br>");
+document.write("Trimmed Feedback: '" + trimmedFeedback + "'<br>");
+document.write("Lowercase Feedback: '" + lowercaseFeedback + "'<br>");
+document.write("Replaced Feedback: '" + replacedFeedback + "'<br>");
+document.write("Position of 'service': " + feedbackposition + "<br>");
+document.write("Feedback Words: " + output.join(", ") + "<br>");
+</script>
+</body>
+</html>
