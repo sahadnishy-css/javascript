@@ -20,13 +20,14 @@
             const lowerBio = cleanedBio.toLowerCase();
             
             // Replace  'javaScript' with 'JS' using global replacement
-            const finalBio = lowerBio.replace(/javascript/g, 'JS');
+            let finalBio = lowerBio.replace(/javascript/g, 'JS');
+            finalBio = finalBio.split(' ');
             //count the number of words in bio
-            const wordCount = finalBio.split(' ').length;
+            const wordCount = finalBio.length;
             //return cleaned profile and bio length 
             return {
-                cleanedUsername: this.username,
-                cleanedBio: this.bio,
+                cleanedUsername: lowerUsername,
+                cleanedBio: finalBio,
                 bioWordCount: wordCount
             };
         
