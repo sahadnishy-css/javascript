@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tittle>statistics widget</tittle>
+</head>
+<body>
+    <script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const userScoreString = "  75 ";
+    const userScore = Number(userScoreString.trim());
+    const scoreDifference = Math.abs(randomNumber - userScore); 
+    const roundedSqrtScore = Math.round(Math.sqrt(userScore));  
+    const piValue = Math.PI; 
+    const multipliedValue = "50" * 2;
+    //display results
+    document.write("Score Difference: " + scoreDifference + "<br>");        
+    document.write("Rounded Square Root of User Score: " + roundedSqrtScore + "<br>");
+    document.write("Value of π: " + piValue + "<br>");
+    document.write("Multiplied Value (\"50\" * 2): " + multipliedValue + "<br>");
+    </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>game result generator</title>
+        <h2>GAME RESULT GENERATOR</h2>
+    </head>
+    <body>
+        <script>
+           
+              const mysteryLevel = Math.floor(Math.random() * 50) + 1;
+             const userInputString = "  45 ";
+              const userInputScore = Number(userInputString.trim());
+              const levelDifference = Math.abs(mysteryLevel - userInputScore);
+                const roundedSqrtUserScore = Math.round(Math.sqrt(userInputScore));
+                 const piConstant = Math.PI;
+                const implicitMultiplication = "20" * 5;
+                const highestValue = Math.max(10, 20, mysteryLevel);
+                const lowestValue = Math.min(10, 20, mysteryLevel);
+            //display all the results using document.write().
+                document.write("Mystery Level: " + mysteryLevel + "<br>");  
+                document.write("Level Difference: " + levelDifference + "<br>");
+                document.write("Rounded Square Root of User Score: " + roundedSqrtUserScore + "<br>");
+                document.write("Value of π: " + piConstant + "<br>");
+                document.write("Implicit Multiplication (\"20\" * 5): " + implicitMultiplication + "<br>");
+                document.write("Highest Value (10, 20, Mystery Level): " + highestValue
+    + "<br>");
+                document.write("Lowest Value (10, 20, Mystery Level): " + lowestValue + "<br>");
+        </script>
+    </body>
+</html>
