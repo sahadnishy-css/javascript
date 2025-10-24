@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>profile page</title>
+</head>
+<body>
+    <button onclick="Clickevent">click me</button>
+    <script>
+
+    function Clickevent() {
+        let userProfile = {
+            username: "samuel",
+            age: 28,
+            isAdmin:true
+        };
+        if(userProfile.age >=18 && userProfile.isAdmin){
+            console.log("Access granted.");
+        }else{
+            console.log("Access denied.")
+
+        }
+        }
+    console.log("age" in userProfile);
+    //delete the age property after the check using the delete operator.
+    delete userProfile.age;
+    </script>
+</body> 
+</html>
