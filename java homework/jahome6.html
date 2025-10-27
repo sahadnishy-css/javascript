@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Result Dashboard</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>STUDENT RESULTS</h1>
+    </body>
+    <script>
+        var students =["John", "Alice", "Bob", "Diana", "Ethan"]; 
+        var scores =[85, 30, 78, 90, 88];
+        var studentDetails = students.map(function(student, index) {
+            return "Student: " + student + " - Score: " + scores[index];
+        });
+        for( var i=0; i<studentDetails.length; i++) {
+            document.write(studentDetails[i]+"<br>");
+        }
+        scores.filter(function(score, index) {
+            if(score >= 60) {
+                document.write("Students who passed: " + students[index] + " - Score: " + score + "<br>");
+            }
+        }) 
+     
+        var totalScore = scores.reduce(function(total, score) {
+            return total + score;
+        }, 0);
+        document.write("<br>Total Score of all students: " + totalScore + "<br>");
+      
+        var allPassed = scores.every(function(score) {
+          return score >= 35;
+        });
+        document.write("Did all students pass? " + allPassed + "<br>");
+     
+        var anyAbove90 = scores.some(function(score) {
+            return score > 90;
+        });
+        document.write("Did any student score above 90? " + anyAbove90 + "<br>");
+      
+        var sortedIndices = scores.map(function(score, index) {
+            return index;
+        }).sort(function(a, b) {
+            return scores[b] - scores[a];
+        });
+        document.write("<br>Students sorted by scores (highest to lowest):<br>");
+        for(var i=0; i<sortedIndices.length; i++) {
+            var index = sortedIndices[i];
+            document.write("Student: " + students[index] + " - Score: " + scores[index] + "<br>");
+        }
+    </script>
