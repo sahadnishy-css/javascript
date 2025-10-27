@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>online grocery store</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>PRODUCTS DETAILS</h1>
+    <script>
+        var products = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
+         var prices = [50, 40, 110, 90, 120];
+         var productDetails = products.map(function(product, index) {
+            return "Product: " + product + " - Price: " + prices[index];
+         });
+            var array = prices;
+           for( var i=0; i<productDetails.length; i++) {
+            document.write(productDetails[i]+"<br>");
+           }
+
+            array.filter(function(price, index) {
+            if(price > 50) {
+                document.write("products with price greater than 50: " + products[index] + " - Price: " + price + "<br>");
+            }
+           })
+       //add a new product watermelon with price 80.
+         products.push("Watermelon");       
+            prices.push(80);
+            document.write("<br>After adding new product:<br>");
+            for( var i=0; i<products.length; i++) {
+                document.write("Product: " + products[i] + " - Price: " + prices[i] + "<br>");
+            }
+    </script>
+</body>
