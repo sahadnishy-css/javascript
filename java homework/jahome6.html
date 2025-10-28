@@ -13,29 +13,30 @@
         var studentDetails = students.map(function(student, index) {
             return "Student: " + student + " - Score: " + scores[index];
         });
-        for( var i=0; i<studentDetails.length; i++) {
-            document.write(studentDetails[i]+"<br>");
+           for( var i=0; i<studentDetails.length; i++) {
+            document.write(studentDetails[i]+"<br>");   
         }
+         document.write("<br><b>Students who passed:</b><br>"); 
         scores.filter(function(score, index) {
             if(score >= 60) {
-                document.write("Students who passed: " + students[index] + " - Score: " + score + "<br>");
+                document.write( students[index] + " - Score: " + score + "<br>");
             }
         }) 
      
         var totalScore = scores.reduce(function(total, score) {
             return total + score;
         }, 0);
-        document.write("<br>Total Score of all students: " + totalScore + "<br>");
+        document.write("<br><b>Total Score of all students:</b> " + totalScore + "<br>");
       
         var allPassed = scores.every(function(score) {
           return score >= 35;
         });
-        document.write("Did all students pass? " + allPassed + "<br>");
+        document.write("<b>Did all students pass? </b>" + allPassed + "<br>");
      
         var anyAbove90 = scores.some(function(score) {
             return score > 90;
         });
-        document.write("Did any student score above 90? " + anyAbove90 + "<br>");
+        document.write("<b>Did any student score above 90?</b> " + anyAbove90 + "<br>");
       
         var sortedIndices = scores.map(function(score, index) {
             return index;
