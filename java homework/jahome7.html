@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Reminder Tool</title>
+    </head>
+    <body>
+        <script>
+            //the page should take user input of a past date and display the year,month (in name) and day of the date.
+function getBirthdayDetails(friend) {
+    const birthDate = new Date(friend.birthDate);   
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return birthDate.toLocaleDateString(undefined, options);
+            //display how many years passed since the date.
+    const currentDate = new Date();
+    const timeDifference = currentDate - birthDate;
+    const yearsPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365.25));
+    return yearsPassed; 
+            }
+            //use the function to get the details of a friend's birthday
+            const friend = {
+                name: "Alice",
+                birthDate: "2018-03-15"
+            };
+        //display a costom message that says it has  been more than a year since that date or it has been less than a year since that date.
+        const yearsSinceBirthday = getBirthdayDetails(friend);
+        if (yearsSinceBirthday > 1) {
+            document.write("It has been more than a year since " + friend.name + .<br>");
+        } else {
+            document.write("It has been less than a year since " + friend.name + .<br>");
+        }
+      
+    </script>
