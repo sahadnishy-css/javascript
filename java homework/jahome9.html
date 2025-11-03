@@ -9,12 +9,12 @@
 <body>  
     <script>
         let blog=prompt("ENTER YOUR BLOG CONTENT");
-        let updatedblog = blog.replace(/(bad|ugly|supid)/gi,"***");
+        let updatedblog = blog.replace(/(bad|ugly|stupid)/gi,"***");
         document.write(`<h2>BLOG CONTENT</h2><p>${updatedblog}</p>`);
         let count=updatedblog.match(/[0-9]/g);
-        document.write(`<h3>NUMBER OF DIGITS IN YOUR BLOG: ${count}</h3>`);
+        document.write(`<h3>NUMBER OF DIGITS IN YOUR BLOG: ${count.length}</h3>`);
         let capitalized = updatedblog.match(/[A-Z]/g);
-        document.write(`<h3>NUMBER OF CAPITAL LETTERS IN YOUR BLOG: ${capitalized}</h3>`);
+        document.write(`<h3>NUMBER OF CAPITAL LETTERS IN YOUR BLOG: ${capitalized.length}</h3>`);
     </script>
 </body> 
 </html>
