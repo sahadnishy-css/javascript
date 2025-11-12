@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <style>
+input,
+output {
+    border: 1px solid rgb(42, 46, 165);
+    width: 200px;
+    padding: 10px 30px;
+}
+select {
+   border: 1px solid rgb(42, 46, 165);
+    font-weight: bold;
+    padding-inline: 8px;
+    padding-bottom: 2px;
+}
+#result {
+  padding-bottom:3px;
+    padding-inline: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+button {
+   border: 1px solid rgb(42, 46, 165);
+    margin-block: 20px;
+    padding: 10px 30px;
+}
+form {
+    margin: auto;
+    width: fit-content;
+    
+}
+h1{
+    text-align: center;
+    font-size: 400%;
+
+}
+    </style>
+  </head>
+  <body>
+       <h1>Calculator</h1>
+    <form id="calcForm" onsubmit="calculate(event)">
+        <input type="number" placeholder="Enter first number" id="first">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+         <input type="number" placeholder="Enter second number" id="second">
+       <br>
+        <button type="submit">=</button>
+        <br>
+        <output id="result">Answer</output>
+    </form>
+    <script>
+      
+function calculate(event) {
+    event.preventDefault();
+    const firstNum = Number(document.getElementById('first').value);
+    const secondNum = Number(document.getElementById('second').value);
+    const operator = document.getElementById('operator').value;
+    switch(operator) {
+        case '+':
+            add(firstNum, secondNum);    
+        break;
+        case '-':
+            subtract(firstNum, secondNum);
+        break;
+        case '*':
+            multiply(firstNum, secondNum);
+        break;
+        case '/':
+            divide(firstNum, secondNum);
+        break;
+    }
+}
+function add(first, second) {
+    let result = first + second;
+    printResult(result);
+}
+function subtract(first, second) {
+    let result = first - second;
+    printResult(result);
+}
+function multiply(first, second) {
+    
+    let result = first * second;
+    printResult(result);
+}
+function divide(first, second) {
+    if (second==0){
+        printResult("Cannot divide by 0");
+        return;
+    }
+    let result = first / second;
+    printResult(result);
+}
+function printResult(result) {
+    const output = document.getElementById('result');
+    output.innerHTML = result;
+}
+
+    </script>
+  </body>
+</html>
